@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import java.util.*;
@@ -36,6 +37,9 @@ public class Main extends Application {
 
         Group root = new Group();
         Scene scene = new Scene(root, width, height);
+
+        Rectangle background = new Rectangle(width,height, Color.rgb(52, 73, 94));
+        root.getChildren().add(background);
 
         primaryStage.setTitle("Planeten Model");
         primaryStage.setScene(scene);
@@ -112,7 +116,7 @@ public class Main extends Application {
 
             transitions.add(transition);
 
-            umlaufbahn.setStroke(Color.LIGHTGRAY);
+            umlaufbahn.setStroke(Color.rgb(255,255,255,0.6));
             umlaufbahn.setFill(Color.TRANSPARENT);
             umlaufbahn.setStrokeWidth(2);
 
@@ -163,6 +167,7 @@ public class Main extends Application {
         animation(true);
         animation(false); // This start - stop should put them in their default position
         firstTime = true;
+        animationPlaying = false;
         pauseTimestamps.clear();
     }
 }

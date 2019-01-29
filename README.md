@@ -1,4 +1,4 @@
 # Planeten-Model
 Für Onur 👨‍💻😘🙈
 
-Den Ordner .idea kannst du irnorieren
+Den Ordner '.idea' kannst du irgnorieren
